@@ -1,7 +1,7 @@
 # ID Generator 0.0.1
 Generate id for collection with or without prefix.
 ### Usage
-```javascript
+```js
 // idGenerator.gen(collection, field, length);
 var id = idGenerator.gen(CustomerCollection, '_id', 3); // 001, 002
 
