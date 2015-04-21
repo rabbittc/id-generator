@@ -1,5 +1,9 @@
 # ID Generator 0.0.1
 Generate id for collection with or without prefix.
+### Install
+```js
+meteor add theara:id-generator
+```
 ### Usage
 ```js
 // idGenerator.gen(collection, field, length);
