@@ -1,4 +1,4 @@
-# ID Generator 0.0.1
+# ID Generator 0.0.3
 Generate id for collection with or without prefix.
 ### Install
 ```js
@@ -6,12 +6,18 @@ meteor add theara:id-generator
 ```
 ### Usage
 ```js
-// idGenerator.gen(collection, field, length);
-var id = idGenerator.gen(CustomerCollection, '_id', 3); // 001, 002
+// idGenerator.gen(collection, length, [field]); // default field = _id
+var id = idGenerator.gen(CustomerCollection, 3); // 001, 002
+var id = idGenerator.gen(CustomerCollection, 3, 'otherField'); // 001, 002
 
-// idGenerator.genWithPrefix(collection, field, prefix, length);
-var id = idGenerator.genWithPrefix(CustomerCollection, '_id', 'A', 3); // A-001, A-002
+// idGenerator.genWithPrefix(collection, prefix, length, [field]); //default field = _id
+var id = idGenerator.genWithPrefix(CustomerCollection, '001-', 3); // 001-0001, 001-0002 (BranchOffice-ID)
+var id = idGenerator.genWithPrefix(CustomerCollection, '001-', 3, 'otherField'); // 001-0001, 001-0002 (BranchOffice-ID)
 ```
 ### Changelog
+- v 0.0.3 (2014-04-23)
+    - fix field param
+- v 0.0.2 (2014-04-23)
+    - fix generate with prefix
 - v 0.0.1 (2014-04-21)
     - init
