@@ -1,4 +1,4 @@
-# ID Generator 0.0.3
+# ID Generator 0.0.4
 Generate id for collection with or without prefix.
 ### Install
 ```js
@@ -15,6 +15,8 @@ var id = idGenerator.genWithPrefix(CustomerCollection, '001-', 3); // 001-0001, 
 var id = idGenerator.genWithPrefix(CustomerCollection, '001-', 3, 'otherField'); // 001-0001, 001-0002 (BranchOffice-ID)
 ```
 ### Changelog
+- v 0.0.3 (2014-04-24)
+    - fix with prefix method
 - v 0.0.3 (2014-04-23)
     - fix field param
 - v 0.0.2 (2014-04-23)
